@@ -1,0 +1,11 @@
+<label for="Register">Register</label><br>
+<form  method="post" action="register.php">
+  <label for="user">User Name</label><br>
+  <input role="presentation" autocomplete="off" type="text" name="user" required >
+  <br>
+  <label for="pass">Password</label><br>
+  <input type="password" name="pass" pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$" minlength="8" title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:" required >
+	<!-- pattern match taken from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a/19605207-->
+ <br>
+  <input type="submit" value="Submit">
+</form>
